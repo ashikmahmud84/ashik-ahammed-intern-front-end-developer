@@ -5,6 +5,8 @@ import PopularLinks from './components/sections/PopularLinks'
 import PremiumTools from './components/sections/PremiumTools'
 import Pricing from './components/sections/Pricing'
 import Statistics from './components/sections/Statistics'
+import Testimonials from './components/sections/Testimonials'
+import WhyChoose from './components/sections/WhyChoose'
 
 function App() {
   return (
@@ -22,6 +24,10 @@ function App() {
         <PremiumTools />
 
         <Pricing/>
+
+        <Testimonials />
+
+        <WhyChoose/>
 
 
       </main>
