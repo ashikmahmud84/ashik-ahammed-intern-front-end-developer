@@ -1,6 +1,8 @@
 
 import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
+import PopularLinks from './components/sections/PopularLinks'
+import PremiumTools from './components/sections/PremiumTools'
 import Statistics from './components/sections/Statistics'
 
 function App() {
@@ -13,6 +15,10 @@ function App() {
         <Hero/>
 
         <Statistics />
+
+        <PopularLinks/>
+
+        <PremiumTools />
 
 
       </main>
