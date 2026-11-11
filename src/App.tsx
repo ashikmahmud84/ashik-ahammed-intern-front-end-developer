@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
 import PopularLinks from './components/sections/PopularLinks'
 import PremiumTools from './components/sections/PremiumTools'
+import Pricing from './components/sections/Pricing'
 import Statistics from './components/sections/Statistics'
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <PopularLinks/>
 
         <PremiumTools />
+
+        <Pricing/>
 
 
       </main>
