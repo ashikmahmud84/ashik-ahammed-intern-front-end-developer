@@ -8,9 +8,8 @@ const statistics = [
 
 function Statistics() {
   return (
-    <section className="w-full bg-[#5925F5] px-4 py-6 sm:py-8">
+    <section className="w-full bg-primary px-4 py-6 sm:py-8">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-7 md:grid-cols-4 md:gap-y-0">
-
         {statistics.map((item) => (
           <div
             key={item.label}
@@ -20,12 +19,11 @@ function Statistics() {
               {item.value}
             </h2>
 
-            <p className="mt-1 text-xs font-medium text-violet-100">
+            <p className="mt-1 text-xs font-medium text-secondary">
               {item.label}
             </p>
           </div>
         ))}
-
       </div>
     </section>
   )

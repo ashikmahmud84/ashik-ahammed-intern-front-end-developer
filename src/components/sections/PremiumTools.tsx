@@ -18,34 +18,32 @@ const analytics = [
 
 function PremiumTools() {
   return (
-    <section className="w-full bg-[#F7F8FC] px-5 py-20 sm:px-8 sm:py-24">
+    <section className="w-full bg-background px-5 py-20 sm:px-8 sm:py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
 
         {/* Left Content */}
         <div className="min-w-0">
-          <span className="text-[11px] font-bold uppercase tracking-widest text-[#5925F5]">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Premium
           </span>
 
-          <h2 className="mt-3 max-w-md text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="mt-3 max-w-md text-3xl font-extrabold leading-tight tracking-tight text-heading sm:text-4xl">
             Unlock powerful tools for serious growth.
           </h2>
 
-          <p className="mt-4 max-w-lg text-sm leading-7 text-gray-500 sm:text-base">
-            Go beyond basic shortening with a full suite of marketing and
-            developer tools — custom branded links, UTM builders, deep
-            analytics, QR codes, and a REST API for your apps.
+          <p className="mt-4 max-w-lg text-sm leading-7 text-body sm:text-base">
+            Go beyond basic shortening with a full suite of marketing and developer tools — custom branded links, UTM builders, deep analytics, QR codes, and a REST API for your apps.
           </p>
 
           <ul className="mt-6 space-y-3">
             {features.map((feature) => (
               <li
                 key={feature}
-                className="flex items-center gap-2.5 text-sm text-gray-700 sm:text-base"
+                className="flex items-center gap-2.5 text-sm text-body sm:text-base"
               >
                 <CheckCircle2
                   size={18}
-                  className="shrink-0 fill-[#E9E2FF] text-[#5925F5]"
+                  className="shrink-0 fill-secondary text-primary"
                 />
                 {feature}
               </li>
@@ -54,8 +52,8 @@ function PremiumTools() {
         </div>
 
         {/* Right Analytics Dashboard */}
-        <div className="w-full min-w-0 rounded-xl bg-[#5925F5] p-7 text-white shadow-sm sm:p-9">
-          <h3 className="text-base font-bold sm:text-lg">
+        <div className="w-full min-w-0 rounded-xl bg-primary p-7 text-white shadow-sm sm:p-9">
+          <h3 className="text-xl font-bold">
             Link Analytics Dashboard
           </h3>
 
@@ -65,7 +63,7 @@ function PremiumTools() {
                 key={item.url}
                 className="flex min-w-0 items-center gap-3"
               >
-                <span className="w-28 shrink-0 truncate text-xs text-violet-200 sm:w-32 sm:text-sm">
+                <span className="w-28 shrink-0 truncate text-xs text-white/80 sm:w-32 sm:text-sm">
                   {item.url}
                 </span>
 
@@ -76,7 +74,7 @@ function PremiumTools() {
                   />
                 </div>
 
-                <span className="w-12 shrink-0 text-right text-xs font-bold sm:text-sm">
+                <span className="w-12 shrink-0 text-right text-sm font-bold">
                   {item.clicks}
                 </span>
               </div>

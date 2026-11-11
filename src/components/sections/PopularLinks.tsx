@@ -6,7 +6,7 @@ const popularLinks = [
   {
     shortUrl: 'https://thetiny.site/ARL5EN',
     originalUrl: 'https://app.example.com/dashboard?ref=campaign',
-    clicks: 419,
+    clicks: 430,
   },
   {
     shortUrl: 'https://thetiny.site/BArxC1',
@@ -48,15 +48,16 @@ function PopularLinks() {
   }
 
   return (
-    <section className="w-full bg-white px-4 py-10 sm:py-12">
+    <section className="w-full bg-surface px-4 py-10 sm:py-12">
       <div className="mx-auto max-w-7xl">
+
         {/* Section Heading */}
         <div className="mb-8 text-center">
-          <h2 className="text-xl font-extrabold tracking-tight text-gray-950 sm:text-2xl">
+          <h2 className="text-2xl font-extrabold tracking-tight text-heading sm:text-3xl">
             Most Popular Links
           </h2>
 
-          <p className="mt-2 text-xs text-gray-500 sm:text-sm">
+          <p className="mt-2 text-sm text-body sm:text-base">
             Check out the most clicked links on our platform
           </p>
         </div>
@@ -66,39 +67,39 @@ function PopularLinks() {
           {popularLinks.map((link) => (
             <div
               key={link.shortUrl}
-              className="flex min-w-0 flex-col gap-3 rounded-lg border border-gray-100 bg-[#F8F9FB] px-3 py-3 transition-shadow duration-200 hover:shadow-[0_4px_10px_rgba(0,0,0,0.10)] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-4"
+              className="flex min-w-0 flex-col gap-3 rounded-lg border border-gray-100 bg-background px-3 py-3 transition-shadow duration-200 hover:shadow-[0_4px_10px_rgba(0,0,0,0.10)] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-4"
             >
               {/* Link Information */}
               <div className="min-w-0 flex-1 overflow-hidden">
-                <p className="truncate text-[11px] font-medium text-[#5925F5] sm:text-xs">
+                <p className="truncate text-sm font-medium text-primary">
                   {link.shortUrl}
                 </p>
 
-                <p className="mt-1 truncate text-[9px] text-gray-400 sm:text-[10px]">
+                <p className="mt-1 truncate text-xs text-body">
                   {link.originalUrl}
                 </p>
               </div>
 
               {/* Actions */}
               <div className="flex shrink-0 items-center justify-end gap-1.5">
-                <span className="flex items-center gap-1 rounded-md bg-white px-2 py-1.5 text-[10px] text-gray-600">
-                  <MousePointerClick size={11} />
+                <span className="flex items-center gap-1 rounded-md bg-surface px-2 py-1.5 text-xs text-body">
+                  <MousePointerClick size={14} />
                   {link.clicks} clicks
                 </span>
 
                 <button
                   type="button"
                   onClick={() => handleCopy(link.shortUrl)}
-                  className="flex items-center gap-1 rounded-md bg-[#5925F5] px-2.5 py-1.5 text-[10px] font-medium text-white transition-colors hover:bg-[#4718D8]"
+                  className="flex items-center gap-1 rounded-md bg-primary px-2.5 py-1.5 text-xs font-medium text-white transition-colors hover:bg-primary/90"
                 >
                   {copiedUrl === link.shortUrl ? (
                     <>
-                      <Check size={11} />
+                      <Check size={14} />
                       Copied
                     </>
                   ) : (
                     <>
-                      <Copy size={11} />
+                      <Copy size={14} />
                       Copy
                     </>
                   )}
@@ -107,9 +108,9 @@ function PopularLinks() {
                 <button
                   type="button"
                   onClick={() => setQrUrl(link.shortUrl)}
-                  className="flex items-center gap-1 rounded-md bg-[#EDE8FF] px-2.5 py-1.5 text-[10px] font-medium text-[#5925F5] transition-colors hover:bg-[#DED5FF]"
+                  className="flex items-center gap-1 rounded-md bg-secondary px-2.5 py-1.5 text-xs font-medium text-primary transition-colors hover:bg-primary/15"
                 >
-                  <QrCode size={11} />
+                  <QrCode size={14} />
                   QR
                 </button>
               </div>
@@ -125,23 +126,23 @@ function PopularLinks() {
           onClick={() => setQrUrl(null)}
         >
           <div
-            className="relative w-full max-w-xs rounded-xl bg-white p-6 text-center shadow-xl"
+            className="relative w-full max-w-xs rounded-xl bg-surface p-6 text-center shadow-xl"
             onClick={(event) => event.stopPropagation()}
           >
             <button
               type="button"
               onClick={() => setQrUrl(null)}
               aria-label="Close QR preview"
-              className="absolute right-3 top-3 rounded-md p-1 text-gray-500 hover:bg-gray-100"
+              className="absolute right-3 top-3 rounded-md p-1 text-body hover:bg-background"
             >
               <X size={18} />
             </button>
 
-            <h3 className="text-lg font-bold text-gray-900">
+            <h3 className="text-xl font-bold text-heading">
               QR Code
             </h3>
 
-            <p className="mt-1 break-all text-xs text-gray-500">
+            <p className="mt-1 break-all text-xs text-body">
               {qrUrl}
             </p>
 
@@ -154,7 +155,7 @@ function PopularLinks() {
             <button
               type="button"
               onClick={() => handleCopy(qrUrl)}
-              className="mt-4 rounded-md bg-[#5925F5] px-5 py-2 text-xs font-medium text-white hover:bg-[#4718D8]"
+              className="mt-4 rounded-md bg-primary px-5 py-2 text-sm font-medium text-white transition hover:bg-primary/90"
             >
               Copy Link
             </button>

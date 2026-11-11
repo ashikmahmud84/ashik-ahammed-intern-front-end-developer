@@ -30,10 +30,10 @@ function App() {
 
         <WhyChoose/>
 
-        <Footer/>
-
-
+      
       </main>
+
+       <Footer/>
     </>
   )
 }

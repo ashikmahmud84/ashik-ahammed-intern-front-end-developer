@@ -1,6 +1,7 @@
 
 @import "tailwindcss";
 
+/* Global Reset */
 * {
   box-sizing: border-box;
 }
@@ -9,13 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* html,
+html,
 body,
 #root {
   width: 100%;
@@ -23,5 +18,21 @@ body,
 }
 
 body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-} */
+}
+
+/* Centralized Color System */
+@theme {
+  /* Brand Colors */
+  --color-primary: #5925F5;
+  --color-secondary: #EDE8FF;
+
+  /* Neutral Colors */
+  --color-background: #F7F8FC;
+  --color-surface: #FFFFFF;
+  --color-heading: #111827;
+  --color-body: #6B7280;
+}
